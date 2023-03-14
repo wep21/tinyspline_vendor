@@ -13,11 +13,19 @@ set(BUILD_SHARED_LIBS ON)
 fetchcontent_makeavailable(tinyspline)
 
 install(
+  DIRECTORY
+    ${tinyspline_BINARY_DIR}/src/CMakeFiles/Export/lib64/cmake/tinyspline/
+  DESTINATION
+    share/${PROJECT_NAME}/cmake
+)
+install(
+  DIRECTORY
+    ${tinyspline_BINARY_DIR}/src/CMakeFiles/Export/lib64/cmake/tinysplinecxx/
+  DESTINATION
+    share/${PROJECT_NAME}/cmake
+)
+install(
   FILES
-    ${tinyspline_BINARY_DIR}/src/CMakeFiles/Export/lib64/cmake/tinyspline/tinyspline-targets.cmake
-    ${tinyspline_BINARY_DIR}/src/CMakeFiles/Export/lib64/cmake/tinyspline/tinyspline-targets-release.cmake
-    ${tinyspline_BINARY_DIR}/src/CMakeFiles/Export/lib64/cmake/tinysplinecxx/tinysplinecxx-targets.cmake
-    ${tinyspline_BINARY_DIR}/src/CMakeFiles/Export/lib64/cmake/tinysplinecxx/tinysplinecxx-targets-release.cmake
     ${tinyspline_BINARY_DIR}/tinyspline-config.cmake
     ${tinyspline_BINARY_DIR}/tinyspline-config-version.cmake
     ${tinyspline_BINARY_DIR}/tinysplinecxx-config.cmake
